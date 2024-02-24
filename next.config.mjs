@@ -7,7 +7,9 @@ const nextConfig = {
 	pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 	// Optionally, add any other Next.js config below
 	output: "export", // Will export all routes as static html
-	basePath: "/next-mdx-static-blog",
+	images: {
+		unoptimized: true,
+	},
 };
 
 const withMDX = createMDX({

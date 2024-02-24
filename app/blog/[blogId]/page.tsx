@@ -1,8 +1,9 @@
-import { getPostNames, getPostData } from "@/lib/blog_functions";
+import { getPostNames, getPostData } from "../../../lib/blog_functions";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import React from "react";
+import '../styles/blog.sass'
 
 /**
  * return all possible blogId values in an array like [{blogId: 'first_blog'}, {blogId: 'second_blog'}]
@@ -38,16 +39,16 @@ export default async function BlogPage({ params }: BlogPageProps) {
 	);
 
 	return (
-		<div className="container mx-auto p-4">
+		<div className="container">
 			<div>
 				<Link
 					prefetch={false}
 					href={"/blog"}
-					className="text-sm font-medium p-2 rounded-md hover:bg-slate-200 dark:hover:bg-zinc-600">
+					className="">
 					&larr; All Blogs
 				</Link>
 			</div>
-			<article className="prose w-full mt-4 dark:prose-invert">
+			<article className="">
 				<BlogMarkdown />
 			</article>
 		</div>
